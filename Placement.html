@@ -133,6 +133,72 @@ header .logo img {
   }
 }
 
+    .carousel1-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding: 40px 0;
+    }
+
+    .carousel1-track {
+      display: flex;
+      gap: 20px;
+      padding: 0 40px;
+      animation: scrollLeft 25s linear infinite; /* continuous scrolling */
+    }
+
+    .testimonial1-card {
+      flex: 0 0 300px;
+      background-color: #1f1f1f;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .testimonial1-card:hover {
+      transform: scale(1.05);
+    }
+
+    .testimonial1-card img,
+    .testimonial1-card video {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-card h3 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+      color: #f0f0f0;
+    }
+
+    .testimonial-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #ccc;
+    }
+
+    /* Infinite scroll effect */
+    @keyframes scrollLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); } /* moves half track, then loops */
+    }
+
+    @media (max-width: 768px) {
+      .carousel1-track {
+        gap: 10px;
+        padding: 0 20px;
+      }
+      .testimonial-card {
+        flex: 0 0 260px;
+      }
+    }
+
+
   </style>
   <body>
      <header>
@@ -237,6 +303,71 @@ header .logo img {
 
   </div>
 </div>
+  <div class="carousel1-container">
+    <div class="carousel1-track">
+      <!-- Original cards -->
+      <div class="testimonial1-card">
+        <img src="sayli.jpeg" alt="Sayli Bhongade">
+        <h3>Sayli Bhongade</h3>
+        <p>“Immense gratitude to Cummins College for hands-on learning and real-world experiences. These opportunities have shaped my skills and confidence for the future.”</p>
+      </div>
+
+      <div class="testimonial1-card">
+        <img src="tanya.jpeg" alt="Tanaya Khond">
+        <h3>Tanaya Khond</h3>
+        <p>“The knowledge and support from Cummins helped me navigate challenges and land amazing opportunities. Truly transformative education.”</p>
+      </div>
+
+      <div class="testimonial1-card">
+        <img src="kalyani.jpeg" alt="Kalyani Kadwe">
+        <h3>Kalyani Kadwe</h3>
+        <p>“Cummins College empowered me with resilience and skill. Their training built my confidence and prepared me for the professional world.”</p>
+      </div>
+
+      <div class="testimonial1-card">
+        <img src="radhika.jpeg" alt="Radhika Naitam">
+        <h3>Radhika Naitam</h3>
+        <p>“The holistic development at Cummins College laid a strong foundation for my career. I’ll always cherish the support and memories.”</p>
+      </div>
+
+      <div class="testimonial1-card">
+        <img src="yuvika.jpeg" alt="Yuvika Patil">
+        <h3>Yuvika Patil</h3>
+        <p>“Cummins College provided me with the skills and confidence to excel in my career. The supportive environment and practical learning were invaluable.”</p>
+      </div>
+
+      <!-- Duplicate cards for infinite loop -->
+      <div class="testimonial1-card">
+        <img src="sayli.jpeg" alt="Sayli Bhongade">
+        <h3>Sayli Bhongade</h3>
+        <p>“Immense gratitude to Cummins College for hands-on learning and real-world experiences. These opportunities have shaped my skills and confidence for the future.”</p>
+      </div>
+
+      <div class="testimonial1-card">
+        <img src="tanya.jpeg" alt="Tanaya Khond">
+        <h3>Tanaya Khond</h3>
+        <p>“The knowledge and support from Cummins helped me navigate challenges and land amazing opportunities. Truly transformative education.”</p>
+      </div>
+
+      <div class="testimonial1-card">
+        <img src="kalyani.jpeg" alt="Kalyani Kadwe">
+        <h3>Kalyani Kadwe</h3>
+        <p>“Cummins College empowered me with resilience and skill. Their training built my confidence and prepared me for the professional world.”</p>
+      </div>
+
+      <div class="testimonial1-card">
+        <img src="radhika.jpeg" alt="Radhika Naitam">
+        <h3>Radhika Naitam</h3>
+        <p>“The holistic development at Cummins College laid a strong foundation for my career. I’ll always cherish the support and memories.”</p>
+      </div>
+
+      <div class="testimonial1-card">
+        <img src="yuvika.jpeg" alt="Yuvika Patil">
+        <h3>Yuvika Patil</h3>
+        <p>“Cummins College provided me with the skills and confidence to excel in my career. The supportive environment and practical learning were invaluable.”</p>
+      </div>
+    </div>
+  </div>
 <footer class="footer">
   <div class="footer-container">
 
