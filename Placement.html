@@ -149,11 +149,12 @@ header .logo img {
 
     .testimonial1-card {
       flex: 0 0 300px;
-      background-color: #1f1f1f;
+      background-color: #000000;
       border-radius: 12px;
       padding: 20px;
+      color:white;
       text-align: center;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+      box-shadow: 0 6px 12px rgba(250, 245, 245, 0.4);
       transition: transform 0.3s ease;
     }
 
@@ -197,13 +198,56 @@ header .logo img {
         flex: 0 0 260px;
       }
     }
+    .carousel-container {
+      display: flex;
+      justify-content: center;  /* center horizontally */
+      align-items: center;      /* center vertically if page has height */
+      min-height: 100vh;        /* optional: full screen height */
+    }
 
+    .carousel {
+      max-width: 600px;   /* adjust width */
+      width: 100%;
+    }
+
+    .carousel-item {
+      height: 400px; /* uniform height */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: #fff;
+      border-radius: 10px;
+    }
+
+    .carousel-caption {
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 10px;
+      padding: 20px;
+      max-height: 90%;
+      overflow-y: auto;
+    }
+
+    .company-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .company-list li {
+      background-color: rgba(255,255,255,0.2);
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
 
   </style>
   <body>
      <header>
   <div class="logo">
-    <img src="logo-Photoroom.png" alt="CCOEW Logo">
+    <img src="logo-Photoroom.jpg" alt="CCOEW Logo", style="height:40px; width: 60px;">
     <span>Placement Cell, CCOEW Nagpur</span>
   </div>
   <nav>
@@ -214,10 +258,117 @@ header .logo img {
     <a href="#">Contact Us</a>
   </nav>
 </header>
+<div class="carousel-container">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"></button>
+    </div>
+
+    <div class="carousel-inner">
+<h1 style="text-align:center">OUR RECRUITERS</h1>
+      <!-- PRODUCT BASE COMPANIES -->
+      <div class="carousel-item active" style="background-image: url('1.png');">
+        <div class="carousel-caption d-md-block">
+          <h5>PRODUCT BASE COMPANIES</h5>
+          <ul class="company-list">
+            <li>Palo Alto Networks</li>
+            <li>Intuit India Product Development Center Pvt. Ltd.</li>
+            <li>Paypal</li>
+            <li>PhonePe Pvt Ltd</li>
+            <li>Providence Global Center</li>
+            <li>Cisco</li>
+            <li>Tesco</li>
+            <li>Deutsche India Private Limited</li>
+            <li>BrowserStack</li>
+            <li>Nike India Technology</li>
+            
+     
+          </ul>
+        </div>
+      </div>
+
+      <!-- FINCORP COMPANIES -->
+      <div class="carousel-item" style="background-image: url('2.png');">
+        <div class="carousel-caption d-md-block">
+          <h5>FINCORP COMPANIES</h5>
+          <ul class="company-list">
+            <li>Citi</li>
+            <li>McKinsey & Co.</li>
+            <li>HSBC</li>
+            <li>PepsiCo GBS</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SERVICE COMPANIES -->
+      <div class="carousel-item" style="background-image: url('3.png');">
+        <div class="carousel-caption d-md-block">
+          <h5>SERVICE COMPANIES</h5>
+          <ul class="company-list">
+            <li>ConsultAdd</li>
+            <li>Tech Mahindra</li>
+            <li>Infocepts</li>
+            <li>KPIT (IT arm)</li>
+            <li>HCL Technologies</li>
+            <li>Capgemini</li>
+            <li>DXC</li>
+            <li>Wipro</li>
+            <li>Infosys</li>
+            <li>TCS</li>
+            <li>NEEYAMO</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- AUTOMOBILE COMPANIES -->
+      <div class="carousel-item" style="background-image: url('4.png');">
+        <div class="carousel-caption d-md-block">
+          <h5>AUTOMOBILE COMPANIES</h5>
+          <ul class="company-list">
+            <li>KPIT – Vehicle Engineering and Design</li>
+            <li>MG Motor</li>
+            <li>Wirtgen Group – A John Deere Company</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- MANUFACTURING COMPANIES -->
+      <div class="carousel-item" style="background-image: url('5.png');">
+        <div class="carousel-caption d-md-block">
+          <h5>MANUFACTURING COMPANIES</h5>
+          <ul class="company-list">
+            <li>Cummins India Limited</li>
+            <li>Caterpillar</li>
+            <li>Eaton</li>
+            <li>Kohler</li>
+            <li>Siemens</li>
+            <li>Kennametal India Limited, Bangalore</li>
+            <li>ifm engineering private limited</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
 <body class="bg-light">
 
   <div class="container mt-5">
-    <h2 class="text-center mb-4">Placement Records</h2>
+    <h2 class="text-center mb-4">PLACEMENT RECORDS</h2>
 
     <table class="table table-bordered table-hover align-middle text-center">
       <thead class="table-warning">
@@ -264,7 +415,7 @@ header .logo img {
  <!--video -->
 <div class="container my-5">
   <div class="row g-3 justify-content-center">
-    
+    <H1 style="text-align: center;">STATISTICAL ANALYSIS</H1>
     <div class="col-md-4">
       <div class="card shadow-sm">
         <video autoplay muted loop class="card-img-top" style="height: 300px; width: 100%;">
@@ -302,10 +453,11 @@ header .logo img {
     </div>
 
   </div>
-</div>
+</div>  <h1 style="text-align: center;">TESTIMONIALS..</h1>
   <div class="carousel1-container">
     <div class="carousel1-track">
       <!-- Original cards -->
+     
       <div class="testimonial1-card">
         <img src="sayli.jpeg" alt="Sayli Bhongade">
         <h3>Sayli Bhongade</h3>
@@ -440,3 +592,14 @@ header .logo img {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+<script>
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
