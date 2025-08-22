@@ -137,13 +137,13 @@ header .logo img {
       position: relative;
       overflow: hidden;
       width: 100%;
-      padding: 40px 0;
+      padding: 2px 0;
     }
 
     .carousel1-track {
       display: flex;
-      gap: 20px;
-      padding: 0 40px;
+      gap: 2px;
+      padding: 0 2px;
       animation: scrollLeft 25s linear infinite; /* continuous scrolling */
     }
 
@@ -198,25 +198,27 @@ header .logo img {
         flex: 0 0 260px;
       }
     }
+  
     .carousel-container {
       display: flex;
-      justify-content: center;  /* center horizontally */
-      align-items: center;      /* center vertically if page has height */
-      min-height: 100vh;        /* optional: full screen height */
+      justify-content: center;
+      align-items: center;
+      padding: 25px;  /* instead of full screen */
     }
 
     .carousel {
-      max-width: 600px;   /* adjust width */
+      max-width: 600px;
       width: 100%;
     }
 
     .carousel-item {
-      height: 400px; /* uniform height */
+      height: 400px;
       background-size: cover;
       background-position: center;
       position: relative;
       color: #fff;
       border-radius: 10px;
+      transition: transform 2s ease-in-out; /* smooth slow slide */
     }
 
     .carousel-caption {
@@ -242,7 +244,6 @@ header .logo img {
       border-radius: 5px;
       font-size: 0.9rem;
     }
-
   </style>
   <body>
      <header>
@@ -268,8 +269,20 @@ header .logo img {
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"></button>
     </div>
 
+    <div class="carousel-container">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
+    <!-- interval = 4000ms = 4 seconds (adjust as needed) -->
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"></button>
+    </div>
+   <h2 class="text-center mb-4">OUR RECRUITERS</h2>
     <div class="carousel-inner">
-<h1 style="text-align:center">OUR RECRUITERS</h1>
+
       <!-- PRODUCT BASE COMPANIES -->
       <div class="carousel-item active" style="background-image: url('1.png');">
         <div class="carousel-caption d-md-block">
@@ -285,8 +298,11 @@ header .logo img {
             <li>Deutsche India Private Limited</li>
             <li>BrowserStack</li>
             <li>Nike India Technology</li>
-            
-     
+            <li>GSK (Tech arm)</li>
+            <li>Gartner</li>
+            <li>Blueflame Labs</li>
+            <li>Amadeus</li>
+            <li>KonvergeAI</li>
           </ul>
         </div>
       </div>
@@ -365,10 +381,23 @@ header .logo img {
   </div>
 </div>
 
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+
 <body class="bg-light">
 
   <div class="container mt-5">
-    <h2 class="text-center mb-4">PLACEMENT RECORDS</h2>
+ 
 
     <table class="table table-bordered table-hover align-middle text-center">
       <thead class="table-warning">
@@ -378,6 +407,49 @@ header .logo img {
           <th scope="col" style="color: #f58822;">List of the placed students</th>
         </tr>
       </thead>
+      <div class="container my-5">
+  <div class="row g-3 justify-content-center">
+    <H1 style="text-align: center;">STATISTICAL ANALYSIS</H1>
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <video autoplay muted loop class="card-img-top" style="height: 300px; width: 100%;">
+          <source src="20-21.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="card-body text-center">
+          <h5 class="card-title">Academic Year 2020-21</h5>
+        </div>
+      </div>
+    </div>
+   
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <video autoplay muted loop class="card-img-top" style="height: 300px; width: 100%;">
+          <source src="21-22.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="card-body text-center">
+          <h5 class="card-title">Academic Year 2021-22</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <video autoplay muted loop class="card-img-top" style="height: 300px; width: 100%;">
+          <source src="22-23.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="card-body text-center">
+          <h5 class="card-title">Academic Year 2022-23</h5>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <br>
+  <br>
+  <h2 class="text-center mb-4">PLACEMENT RECORDS</h2>
       <tbody>
         <tr>
           <td>1</td>
@@ -413,46 +485,8 @@ header .logo img {
     </table>
   </div>
  <!--video -->
-<div class="container my-5">
-  <div class="row g-3 justify-content-center">
-    <H1 style="text-align: center;">STATISTICAL ANALYSIS</H1>
-    <div class="col-md-4">
-      <div class="card shadow-sm">
-        <video autoplay muted loop class="card-img-top" style="height: 300px; width: 100%;">
-          <source src="20-21.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <div class="card-body text-center">
-          <h5 class="card-title">Academic Year 2020-21</h5>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="card shadow-sm">
-        <video autoplay muted loop class="card-img-top" style="height: 300px; width: 100%;">
-          <source src="21-22.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <div class="card-body text-center">
-          <h5 class="card-title">Academic Year 2021-22</h5>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="card shadow-sm">
-        <video autoplay muted loop class="card-img-top" style="height: 300px; width: 100%;">
-          <source src="22-23.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <div class="card-body text-center">
-          <h5 class="card-title">Academic Year 2022-23</h5>
-        </div>
-      </div>
-    </div>
-
-  </div>
+<br>
+  <br>
 </div>  <h1 style="text-align: center;">TESTIMONIALS..</h1>
   <div class="carousel1-container">
     <div class="carousel1-track">
@@ -520,6 +554,9 @@ header .logo img {
       </div>
     </div>
   </div>
+  <br>
+  <br>
+  ,br>
 <footer class="footer">
   <div class="footer-container">
 
